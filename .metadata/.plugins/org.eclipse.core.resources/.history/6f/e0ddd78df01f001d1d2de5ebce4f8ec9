@@ -1,0 +1,56 @@
+package Escola;
+import java.util.ArrayList;
+import java.util.Random;
+
+public class Aluno {
+	private String nome;
+	private int matricula;
+	private String endereco;
+	private ArrayList<Double> notas;
+	private double motivacao;
+	public Aluno(String nome, int matricula, String endereco) {
+		this.nome = nome;
+		this.matricula = matricula;
+		this.endereco = endereco;
+		this.notas = new ArrayList <Double>();
+		this.motivacao = (double)(Math.random()*10);
+		//this.motivacao = 0 + (double)(Math.random()*11);//motivação randomica entre 1 e 10!
+	}
+
+	public double getMotivacao() {
+		return motivacao;
+	}
+
+	public void seMotiva(boolean logico) {//motivação minima 1 e maxima 10!
+		if(logico) {
+			if(motivacao<10) {
+				this.motivacao++;
+			}
+		}else {
+			if(motivacao>2)
+			this.motivacao--;
+		}
+		
+	}
+
+	@Override
+	public String toString() {
+		return "Aluno: " + nome + ", matricula: " + matricula + ", endereco: " + endereco;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	
+	
+	public void estuda() {
+		
+	}
+	
+	
+}

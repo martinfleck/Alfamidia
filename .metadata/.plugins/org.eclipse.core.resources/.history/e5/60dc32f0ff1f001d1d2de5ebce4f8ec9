@@ -1,0 +1,55 @@
+package Escola;
+
+import java.util.ArrayList;
+
+public class Turma {
+	private Professor professor;
+	private ArrayList<Aluno> alunos;
+	private int encontros;
+
+	public Turma(Professor professor, int encontros) {
+		this.professor = professor;
+		this.encontros = encontros;
+		this.alunos = new ArrayList<Aluno>();
+	}
+
+	public ArrayList<Aluno> getAlunos() {
+		return alunos;
+	}
+
+	public void adicionaAluno(Aluno aluno) {
+		this.alunos.add(aluno);
+	}
+
+	public void mostraDetalhesTurma() {
+		System.out.println(
+				"Turma do professor " + this.professor.getNome() + " da disciplina " + this.professor.getDisciplina());
+		System.out.println("Relação de alunos:");
+		for (int i = 0; i < alunos.size(); i++) {
+			if (i == (alunos.size() - 1)) {
+				System.out.print(alunos.get(i).getNome() + ".");
+			} else {
+				System.out.print(alunos.get(i).getNome() + ", ");
+			}
+
+		}
+
+	}
+
+	public void iniciaPeriodoLetivo() {
+		for (int numEncontros = 1; numEncontros <= encontros; numEncontros++) {
+			professor.ensina(alunos);
+		}
+	}
+
+	public void encerraPeriodoLetivo() {
+		for (int i = 0; i < alunos.size(); i++) {
+			professor.calculaNotaFinal(alunos.get(i));
+		}
+		
+	}
+	
+	public void apresentaResultados() {
+		
+	}
+}

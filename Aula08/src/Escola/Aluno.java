@@ -1,56 +1,60 @@
 package Escola;
 
+import java.util.ArrayList;
+import java.util.Random;
+
 public class Aluno {
 	private String nome;
 	private int matricula;
 	private String endereco;
-	private int motivacao;
-	private boolean apto;
-	
+	private ArrayList<Integer> notas;
+	private double notaFinal;
+	private boolean alunoAprovado;
+
 	public Aluno(String nome, int matricula, String endereco) {
-		
 		this.nome = nome;
 		this.matricula = matricula;
 		this.endereco = endereco;
-		this.motivacao = 6;//todos os alunos iniciam com a mesma motivação.
-		
+		this.notas = new ArrayList<Integer>();
 	}
 
-	public int getMotivacao() {
-		return motivacao;
+	public boolean isAlunoAprovado() {
+		return alunoAprovado;
 	}
 
-	public void seMotiva(boolean logico) {//motivação minima 1 e maxima 10
-		if(logico) {
-			if(motivacao<10) {
-				this.motivacao++;
-			}
-		}else {
-			if(motivacao>2)
-			this.motivacao--;
+	public void setAlunoAprovado(boolean alunoAprovado) {
+		this.alunoAprovado = alunoAprovado;
+	}
+
+	public double getNotaFinal() {
+		return notaFinal;
+	}
+
+	public void setNotaFinal(double notaFinal) {
+		if (notaFinal >= 6) {
+			this.setAlunoAprovado(true);
+		} else {
+			this.setAlunoAprovado(false);
 		}
-		
+		this.notaFinal = notaFinal;
+	}
+
+	@Override
+	public String toString() {
+		return "Aluno: " + nome + ", matricula: " + matricula + ", endereco: " + endereco;
 	}
 
 	public String getNome() {
 		return nome;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void fazProva() {
+		int notaProva = 4 + (int) (Math.random() * 6);
+		this.notas.add(notaProva);
 	}
 
-	public boolean isApto() {
-		return apto;
+	public ArrayList<Integer> getNotas() {
+		return notas;
 	}
 
-	public void setApto(boolean apto) {
-		this.apto = apto;
-	}
-	
-	public void estuda() {
-		
-	}
-	
-	
 }

@@ -1,0 +1,56 @@
+package Escola;
+import java.util.Random;
+
+public class Aluno {
+	private String nome;
+	private int matricula;
+	private String endereco;
+	private int motivacao;
+	private boolean apto;
+	
+	public Aluno(String nome, int matricula, String endereco) {
+		this.nome = nome;
+		this.matricula = matricula;
+		this.endereco = endereco;
+		this.motivacao = (int)Random(10);
+		
+	}
+
+	public int getMotivacao() {
+		return motivacao;
+	}
+
+	public void seMotiva(boolean logico) {//motivação minima 1 e maxima 10
+		if(logico) {
+			if(motivacao<10) {
+				this.motivacao++;
+			}
+		}else {
+			if(motivacao>2)
+			this.motivacao--;
+		}
+		
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public boolean isApto() {
+		return apto;
+	}
+
+	public void setApto(boolean apto) {
+		this.apto = apto;
+	}
+	
+	public void estuda() {
+		
+	}
+	
+	
+}
