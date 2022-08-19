@@ -1,0 +1,6 @@
+package Escola;
+
+public class Turma {
+	//	A classe Turma deve ter um Professor e uma lista de alunos. É um método 
+	//	para adicionar aluno e outro para mostrar todos os alunos e o professor.
+}
