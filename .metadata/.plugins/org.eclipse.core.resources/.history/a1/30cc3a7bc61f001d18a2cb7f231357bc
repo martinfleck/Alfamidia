@@ -1,0 +1,11 @@
+package Escola;
+
+import java.util.ArrayList;
+
+public class Turma {
+	private Professor professor;
+	private ArrayList<Aluno> alunos;// = new ArrayList<Aluno>();
+	private int encontros;
+	
+	
+}

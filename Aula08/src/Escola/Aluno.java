@@ -1,6 +1,56 @@
 package Escola;
 
 public class Aluno {
-	//	A classe Aluno deve ter os campos: nome, matrícula, endereço. Com nome e 
-	//	matrícula sendo obrigatórios.
+	private String nome;
+	private int matricula;
+	private String endereco;
+	private int motivacao;
+	private boolean apto;
+	
+	public Aluno(String nome, int matricula, String endereco) {
+		
+		this.nome = nome;
+		this.matricula = matricula;
+		this.endereco = endereco;
+		this.motivacao = 6;//todos os alunos iniciam com a mesma motivação.
+		
+	}
+
+	public int getMotivacao() {
+		return motivacao;
+	}
+
+	public void seMotiva(boolean logico) {//motivação minima 1 e maxima 10
+		if(logico) {
+			if(motivacao<10) {
+				this.motivacao++;
+			}
+		}else {
+			if(motivacao>2)
+			this.motivacao--;
+		}
+		
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public boolean isApto() {
+		return apto;
+	}
+
+	public void setApto(boolean apto) {
+		this.apto = apto;
+	}
+	
+	public void estuda() {
+		
+	}
+	
+	
 }

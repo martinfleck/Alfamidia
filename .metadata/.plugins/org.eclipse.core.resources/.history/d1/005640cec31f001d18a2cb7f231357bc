@@ -1,0 +1,8 @@
+package Escola;
+
+public class Turma {
+	private Professor professor;
+	private int encontros;
+	
+	
+}

@@ -1,0 +1,48 @@
+package Escola;
+
+public class Aluno {
+	private String nome;
+	private int matricula;
+	private String endereco;
+	private int motivacao;
+	private boolean apto;
+	
+	public Aluno(String nome, int matricula, String endereco) {
+		
+		this.nome = nome;
+		this.matricula = matricula;
+		this.endereco = endereco;
+		this.motivacao = 6;//todos os alunos iniciam com a mesma motivação.
+		
+	}
+
+	public int getMotivacao() {
+		return motivacao;
+	}
+
+	public void seMotiva(boolean logico) {
+		if(logico) {
+			if(motivacao<10) {
+				this.motivacao++;
+			}
+		}else {
+			if(motivacao>2)
+			this.motivacao--;
+		}
+		
+	}
+
+	public boolean isApto() {
+		return apto;
+	}
+
+	public void setApto(boolean apto) {
+		this.apto = apto;
+	}
+	
+	public void estuda() {
+		
+	}
+	
+	
+}

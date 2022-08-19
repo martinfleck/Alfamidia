@@ -1,0 +1,15 @@
+package Escola;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		String s;
+		System.out.println("Turma do professor " + this.professor.getNome() + " da disciplina " + this.professor.getDisciplina() );
+		System.out.println("Relação de alunos:");
+		for(int i=0; i< alunos.size();i++) {
+			
+			System.out.print(alunos.get(i).getNome() + ", ");
+		}
+	}
+
+}
