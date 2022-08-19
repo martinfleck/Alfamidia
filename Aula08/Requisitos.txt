@@ -1,0 +1,51 @@
+Classe Turma
+//atributos
+- (texto) professor 
+- (lista) lista Aluno 
+- (numerico) encontros 
+
+//metodos
++ ( ) adicionar aluno
++ ( ) mostrar alunos
++ ( ) mostrar professor
++ ( ) mostrar resultados
++ ( ) inicia atividades //laço (0<encontros);ensina
++ ( ) encerra atividades
+
+---------------------------------------
+Classe Aluno
+//atributos
+- (texto) nome 
+- (numerico) matricula 
+- (texto) endereço
+- (numerico) motivacao = 6 //todos iniciam com a mesma motivação de 0 a 10.
+- (logico) aprede 
+
+//metodos
++ (logico) estuda
+o aluno estuda e aprende em função de sua motivaçao por meio de algum mecanismo randomico.
+---------------------------------------
+Classe Professor
+//atributos
+- (texto) nome
+- (texto) disciplina
+
+//metodos
++ ( ) ensina (Turma)
++ (logico) aprova (Aluno)
+
+----------------------------------------
+
+Classe Main
+
+crio Professor1(text nome, texto disciplina)
+
+crio Aluno1, Aluno2, Aluno3, Aluno4, Aluno5, Aluno6(...)
+
+crio Turma1( numerico encontros)
+
+Turma1.adicionaAluno(Aluno1), Turma1.adicionaAluno(Aluno2), Turma1.adicionaAluno(Aluno3), 
+Turma1.adicionaAluno(Aluno4), Turma1.adicionaAluno(Aluno5), Turma1.adicionaAluno(Aluno6)
+
+Turma1.inicia();
+Turma1.termina();
