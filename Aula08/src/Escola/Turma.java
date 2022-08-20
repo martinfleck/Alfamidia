@@ -41,7 +41,8 @@ public class Turma {
 		for (int numEncontros = 1; numEncontros <= encontros; numEncontros++) {
 			System.out.println("Encontro " + numEncontros);
 			professor.ensina(alunos);
-			System.out.println("Avaliacao do Encontro " + numEncontros + " realizada!\n");
+			System.out.println("Aula " + numEncontros + " ministrada!");
+			System.out.println("Avaliacao da aula " + numEncontros + " realizada!\n");
 		}
 	}
 

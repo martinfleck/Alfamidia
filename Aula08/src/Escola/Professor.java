@@ -17,6 +17,7 @@ public class Professor {
 	}
 
 	public void ensina(ArrayList<Aluno> alunos) {
+	
 		for (int i = 0; i < alunos.size(); i++) {
 			alunos.get(i).fazProva();
 		}
